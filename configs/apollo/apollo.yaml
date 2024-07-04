@@ -1,0 +1,64 @@
+log_dir: './logs'
+road_decoder: roadmlp
+exp_decoder: expmlp
+use_exp: False
+dataset: apollo
+lock: True
+enable_vis: False
+hard_realtime: False
+
+data_specs:
+  use_gt: False
+
+criteria:
+  rgb_weight: 2
+  depth_weight: 1
+  sdf_weight: 5000.0
+  fs_weight: 10.0
+  bk_weight: 10.0
+  vit_weight: 0.1
+  sdf_truncation: 0.05
+
+decoder_specs:
+  lum_in_dim: 3
+  lum_dim: 2
+  color_dim: 6
+  depth: 2
+  width: 64
+  in_dim: 16
+  skips: []
+  embedder: none
+  multires: 4
+  kan_basis_type: rbf
+
+tracker_specs:
+  N_rays: 2048
+  learning_rate: 0.01
+  start_frame: 0
+  end_frame: -1
+  step_size: 0.1
+  show_imgs: False
+  max_voxel_hit: 10
+  keyframe_freq: 10
+  num_iterations: 30
+
+mapper_specs:
+  N_rays_each: 2048
+  num_embeddings: 20000
+  use_local_coord: False
+  voxel_size: 0.2
+  step_size: 0.1
+  window_size: 4
+  num_iterations: 15
+  max_voxel_hit: 10
+  final_iter: 0
+  mesh_res: 5
+  overlap_th: 0.8
+
+debug_args:
+  keyframe_freq: 10
+  ckpt_freq: 10
+  verbose: false
+  mesh_freq: 10
+  render_freq: 10
+  render_res: [400, 320]

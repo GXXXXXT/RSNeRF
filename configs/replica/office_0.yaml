@@ -1,0 +1,7 @@
+base_config: configs/replica/replica.yaml
+
+exp_name: replica/office0
+
+data_specs:
+  data_path: './data/replica/office0'
+  max_depth: 10

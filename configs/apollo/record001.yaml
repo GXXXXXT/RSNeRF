@@ -1,0 +1,8 @@
+base_config: configs/apollo/apollo.yaml
+
+exp_name: apollo/record001
+
+data_specs:
+  data_path: './data/apollo/Record001'
+  max_depth: 10
+  left: True

@@ -1,0 +1,7 @@
+base_config: configs/replica/replica.yaml
+
+exp_name: replica/room0
+
+data_specs:
+  data_path: './data/replica/room0'
+  max_depth: 10

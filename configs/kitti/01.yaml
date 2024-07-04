@@ -1,0 +1,7 @@
+base_config: configs/kitti/kitti.yaml
+exp_name: kitti/01
+
+data_specs:
+  data_path: './data/kitti/01'
+  max_depth: 10
+  time: '2011_10_03'
