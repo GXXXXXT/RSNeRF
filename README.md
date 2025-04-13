@@ -5,5 +5,5 @@ Implementation details for regional color difference sampling can be found in th
 `src/utils_loc/sample_util.py`
 
 ### 3.2.1 Kolmogorov-Arnold Network based on Radial basis function
-The implementation of the Kolmogorov-Arnold Network using Radial Basis Function (RBF) is available in:  
+The implementation of the Kolmogorov-Arnold Network using Gaussian Radial Basis Function (GRBF) is available in:  
 `src/variations/KAN`
