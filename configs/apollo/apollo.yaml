@@ -1,7 +1,7 @@
 log_dir: './logs'
 road_decoder: roadmlp
 exp_decoder: expmlp
-use_exp: False
+use_exp: True
 dataset: apollo
 lock: True
 enable_vis: False
@@ -29,7 +29,7 @@ decoder_specs:
   skips: []
   embedder: none
   multires: 4
-  kan_basis_type: rbf
+  kan_basis_type: grbf
 
 tracker_specs:
   N_rays: 2048
