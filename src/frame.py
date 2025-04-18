@@ -85,9 +85,6 @@ class RGBDFrame(nn.Module):
             rgb = deepcopy(self.rgb).cpu()
             depth = deepcopy(self.depth).cpu()
             self.quadtree_sample_mask, self.scope = get_sample_mask(rgb, depth, int(self.N_rays * 0.6))
-            # import cv2
-            # cv2.imshow("scope", self.scope.numpy())
-            # cv2.waitKey(1)
             self.scope = self.scope.long()
 
     @torch.no_grad()
